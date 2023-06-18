@@ -1,0 +1,429 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif
+}
+body{
+  background-color: #000;
+  color: #fff;
+  
+}
+.header{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./images/banner\ 2.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.logo{
+  margin-top: 5px;
+  width: 150px;
+  cursor: pointer;
+
+}
+nav button{
+  border: 0;
+  outline: 0;
+  background-color:#db0001 ;
+  color: #fff;
+  padding: 7px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  
+}
+.btn{
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: white;
+  padding: 7px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-left: 10px;
+
+}
+.dropbtn{
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  background: transparent;
+  border: 0.1px solid rgba(255, 255, 255, 0.401);
+  padding: 7px 10px;
+}
+.dropbtn img{
+  width: 10px;
+  margin-left: 10px;
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.2) ;
+  z-index: 1;
+}
+.dropdown-content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+.dropdown-content a:hover{
+  background-color: grey;
+
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+.dropdown:hover .dropbtn{
+  background: transparent;
+}
+.header-content{
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  margin-top: 100px;*/
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  margin-top: 100px;
+
+}
+.header-content h1{
+ 
+  font-size:62px;
+  line-height: 70px;
+  font-weight: 600;
+  max-width: 650px;
+  margin-bottom: 20px;
+}
+.header h4{
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.header p{
+  font-size: 20px;
+  color: white;
+  
+}
+
+.email-signup input{
+  width: 75%;
+  height: 50px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  font-size: 25px;
+  text-align: center;
+  background: transparent 1.7%;
+}
+::-webkit-input-placeholder{
+  font-size: 15px;
+  
+}
+
+.submit-button{
+  /*background: #db0001;
+  border: 0;
+  outline: 0;
+  align-items: center;
+  top: 50%;
+
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 30px;
+  height: 50px;*/
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-40%);
+  background: #db0001;
+  border: 0;
+  outline: 0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 5px;
+  
+  
+}
+.features{
+  border-top: 6px solid #333;
+  padding: 50px 12%;
+  font-size: 22px;
+}
+.row{
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+.text-col{
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col{
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col img{
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+.features h2{
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.faq{
+  border-top: 6px solid #333;
+  padding: 40px 12%;
+  text-align: center;
+  font-size: 18px;
+
+}
+.faq h2{
+  
+  font-size: 40px;
+}
+.accordian{
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+}
+.accordian li{
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.accordian li label{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+label::after{
+  content: '+';
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+}
+input[type="radio"]{
+  display: none;
+}
+.accordian .content{
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+.accordian input[type="radio"]:checked +label +.content{
+  max-height: 600px;
+  padding: 30px 20px;
+
+}
+.accordian input[type="radio"]:checked +label::after{
+  transform: rotate(135deg);
+
+
+}
+.email-signups{
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin: 30px;
+  overflow: hidden;
+}
+
+.faq .email-signups{
+  max-width: 600px;
+  margin: 20px auto 60px;
+
+}
+.email-signups input{
+  flex: 1;
+  border: 0;
+  outline: 0;
+  margin-left: 20px;
+  color: #000;
+  font-size: 20px;
+
+}
+.email-signups button{
+  background: #db0001;
+  border: 0;
+  outline: 0;color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 15px 20px;
+}
+.faq small{
+  font-size: 13px;
+}
+
+.footer{
+  padding: 50px 15% 10px;
+  border-top: 6px solid #333;
+  color: #777;
+
+}
+.footer h2{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.footer .col{
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+.footer .col a{
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.footer .row{
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.footer .dropbtn{
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.Copyright-text{
+  font-size: 14px;
+  margin-bottom: 10px;
+  transform: translate(50%,50%);
+
+}
+
+@media (max-width:600px){
+  .logo{
+    width: 100px;
+  }
+  nav button{
+    padding: 5px 10px;
+  }
+  nav .dropbtn{
+    padding: 4px 8px;
+  }
+  .header-content{
+    position: unset;
+    transform: none;
+    margin-top: 60px;
+  }
+  .header-content h1{
+    display: inline-block;
+    font-size: 30px;
+  }
+  .header h4{
+    font-size:25px;
+  }
+  .header p{
+    font-size: 20px;
+  }
+  .email-signup{
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 10px 15px;
+  }
+  .submit-button{
+    font-size: 14px;
+    margin-top: 10px;
+    
+    transform: translate(-50%,-170%);
+
+    padding: 18px 5px;
+    
+  }
+  .text-col, .img-col{
+    flex-basis: 100%;
+
+
+  }
+  .features h2{
+    font-size: 30px;
+
+  }
+  .row:nth-child(2), .row:nth-child(4){
+    flex-direction: column-reverse;
+  }
+  .features .row{
+    padding: 10px 0;
+  }
+  .faq h2{
+    font-size: 20px;
+  }
+  .accordian .content{
+    font-size: 14px;
+  }
+  .accordian li label{
+    padding: 10px;
+    font-size: 14px;
+  }
+  label::after{
+    font-size: 22px;
+  }
+  .email-signups button{
+    
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+  .email-signups input{
+    padding: 5px 0px;
+    margin-left: 0px;
+  }
+  .footer .dropbtn{
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  .footer p{
+    transform: translateX(1%);
+  }
+  
+
+
+}
+  
